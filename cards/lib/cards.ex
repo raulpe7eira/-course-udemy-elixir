@@ -8,8 +8,7 @@ defmodule Cards do
     values = ["Ace", "Two", "Three", "Four", "Five"]
 
     for suit <- suits, value <- values do      
-        "#{value} of #{suit}"
-      end
+      "#{value} of #{suit}"
     end
   end
 
