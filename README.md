@@ -6,9 +6,9 @@ Resultado do curso **[The Complete Elixir and Phoenix Bootcamp](https://www.udem
 
 ### Elixir
 
-- [cards](/tree/master/cards)
-- [identicon](/tree/master/identicon)
+- [cards](../../tree/master/cards)
+- [identicon](../../tree/master/identicon)
 
 ### Phoenix
 
-- [discuss](/tree/master/discuss)
+- [discuss](../../tree/master/discuss)
