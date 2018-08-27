@@ -6,9 +6,9 @@ Resultado do curso **[The Complete Elixir and Phoenix Bootcamp](https://www.udem
 
 ### Elixir
 
-- [cards](/raulpe7eira/course-udemy-elixir_and_phoenix/tree/master/cards)
-- [identicon](/raulpe7eira/course-udemy-elixir_and_phoenix/tree/master/identicon)
+- [cards](/course-udemy-elixir_and_phoenix/tree/master/cards)
+- [identicon](/course-udemy-elixir_and_phoenix/tree/master/identicon)
 
 ### Phoenix
 
-- [discuss](/raulpe7eira/course-udemy-elixir_and_phoenix/tree/master/discuss)
+- [discuss](/course-udemy-elixir_and_phoenix/tree/master/discuss)
