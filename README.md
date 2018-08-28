@@ -4,11 +4,11 @@ Resultado do curso **[The Complete Elixir and Phoenix Bootcamp](https://www.udem
 
 ## Projetos
 
-### [Elixir](https://elixir-lang.org/)
+### Elixir
 
 - [cards](../../tree/master/cards)
 - [identicon](../../tree/master/identicon)
 
-### [Phoenix](https://phoenixframework.org/)
+### Phoenix
 
 - [discuss](../../tree/master/discuss)
