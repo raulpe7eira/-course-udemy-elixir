@@ -23,6 +23,8 @@ defmodule Discuss.Router do
 
     get "/topics/:id/edit", TopicController, :edit
     put "/topics/:id", TopicController, :update
+
+    delete "/topics/:id", TopicController, :delete
   end
 
   # Other scopes may use custom stacks.
