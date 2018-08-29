@@ -58,11 +58,13 @@ function renderComments(comments) {
   const renderedComments = comments.map(comment => {
     return commentTemplate(comment)
   })
+
   document.querySelector('.collection').innerHTML = renderedComments.join('')
 }
 
 function renderComment(event) {
   const renderedComment = commentTemplate(event.comment)
+
   document.querySelector('.collection').innerHTML += renderedComment
 }
 
@@ -76,12 +78,15 @@ const createSocket = (topicId) => {
   channel.join()
     .receive("ok", resp => { renderComments(resp.comments) })
     .receive("error", resp => { console.log("Unable to join", resp) })
+
   // Add event for add comments 
   document.querySelector('button').addEventListener('click', () => {
     const content = document.querySelector('textarea').value
     channel.push('comment:add', {content: content})
   })
+
   // Add handle for broadcast
   channel.on(`comments:${topicId}:new`, renderComment)
 }
+
 window.createSocket = createSocket
