@@ -2,7 +2,7 @@ defmodule Discuss.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", Discuss.RoomChannel
+  channel "comments:*", Discuss.CommentChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
