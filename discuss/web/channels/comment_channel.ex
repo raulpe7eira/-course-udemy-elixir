@@ -1,11 +1,33 @@
 defmodule Discuss.CommentChannel do
   use Discuss.Web, :channel
 
-  def join(_topic, _auth_msg, socket) do
-    {:ok, %{hey: "there"}, socket}
+  alias Discuss.{Topic, Comment}
+
+  def join("comments:" <> topic_id, _auth_msg, socket) do
+    topic_id = String.to_integer topic_id
+    topic =
+      Topic
+      |> Repo.get(topic_id)
+      |> Repo.preload(:comments)
+
+    {:ok, %{comments: topic.comments}, assign(socket, :topic, topic)}
   end
 
-  def handle_in(_event, _msg, socket) do
-    {:reply, :ok, socket}
+  def handle_in(_event, %{"content" => content}, socket) do
+    topic = socket.assigns.topic
+    changeset =
+      topic
+      |> build_assoc(:comments)
+      |> Comment.changeset(%{content: content})
+
+    case Repo.insert changeset do
+      {:ok, comment} ->
+        broadcast!(socket, "comments:#{socket.assigns.topic.id}:new",
+          %{comment: comment}
+        )
+        {:reply, :ok, socket}
+      {:error, _reason} ->
+        {:reply, {:error, %{errors: changeset}}, socket}
+    end
   end
 end
