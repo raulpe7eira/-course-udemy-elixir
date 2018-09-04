@@ -2,6 +2,8 @@
 
 Resultado do curso **[The Complete Elixir and Phoenix Bootcamp](https://www.udemy.com/the-complete-elixir-and-phoenix-bootcamp-and-tutorial)** da [Udemy](https://www.udemy.com/).
 
+> **deployed>** <https://course-udemy-elixir--phoenix.herokuapp.com/> **::** :rocket:
+
 ## Projetos
 
 ### Elixir
@@ -12,4 +14,3 @@ Resultado do curso **[The Complete Elixir and Phoenix Bootcamp](https://www.udem
 ### Phoenix
 
 - [discuss](../../tree/master/discuss)
-  > **deployed>** <https://course-udemy-elixir--phoenix.herokuapp.com/> **::** :rocket:
