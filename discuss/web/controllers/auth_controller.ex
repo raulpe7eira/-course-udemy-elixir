@@ -7,7 +7,7 @@ defmodule Discuss.AuthController do
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _params) do
     user_params = %{
       email: auth.info.email,
-      provider: auth.provider,
+      provider: Atom.to_string(auth.provider),
       token: auth.credentials.token
     }
     changeset = User.changeset %User{}, user_params
