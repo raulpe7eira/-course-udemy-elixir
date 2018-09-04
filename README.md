@@ -12,3 +12,4 @@ Resultado do curso **[The Complete Elixir and Phoenix Bootcamp](https://www.udem
 ### Phoenix
 
 - [discuss](../../tree/master/discuss)
+  > **deployed>** <https://course-udemy-elixir--phoenix.herokuapp.com/> **::** :rocket:
